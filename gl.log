@@ -26,3 +26,8 @@
 [LINE:28]# 2021-01-18 10:47:02,189 - INFO - view - Пользователь вошел
 [LINE:28]# 2021-01-18 10:47:20,358 - INFO - view - Пользователь вошел
 [LINE:28]# 2021-01-18 10:49:06,961 - INFO - view - Пользователь вошел
+[LINE:106]# 2021-01-27 13:33:13,098 - ERROR - FDataBase - Ошибка добавления заявки в БД no such table: orders
+[LINE:106]# 2021-01-27 13:33:17,152 - ERROR - FDataBase - Ошибка добавления заявки в БД no such table: orders
+[LINE:106]# 2021-01-27 13:33:42,070 - ERROR - FDataBase - Ошибка добавления заявки в БД no such table: orders
+[LINE:106]# 2021-01-27 13:35:38,342 - ERROR - FDataBase - Ошибка добавления заявки в БД table orders has 30 columns but 5 values were supplied
+[LINE:106]# 2021-01-27 13:41:55,915 - ERROR - FDataBase - Ошибка добавления заявки в БД database is locked

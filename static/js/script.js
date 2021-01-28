@@ -74,4 +74,4 @@ function calc_price(){
 
     }
 
-}
+};

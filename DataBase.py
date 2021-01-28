@@ -91,3 +91,19 @@ class DataBase:
             logger.error("Ошибка получения данных из БД " + str(e))
 
         return []
+
+    def addNewOrder(self, cityto, cityfrom, addressfrom, terminalfrom, addressto, terminalto, date, length, width,
+                    height, weight, size, quantity, all_length, all_size, all_quantity, all_weight, all_width,
+                    all_height, all_hard, doc_length, doc_height, doc_weight, transporation, goods, dop_uslugi, senders,
+                    recipients, payment):
+        try:
+            self.__cur.execute(f'INSERT INTO orders VALUES (NULL, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', (
+            cityto, cityfrom, addressfrom, terminalfrom, addressto, terminalto, date, length, width, height, weight,
+            size, quantity, all_length, all_size, all_quantity, all_weight, all_width, all_height, all_hard, doc_length,
+            doc_height, doc_weight, transporation, goods, dop_uslugi, senders, recipients, payment))
+            self.__db.commit()
+        except sqlite3.Error as e:
+            logger.error("Ошибка добавления заявки в БД " + str(e))
+            return False
+
+        return True

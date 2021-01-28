@@ -29,4 +29,4 @@ const container_status_none = document.querySelector('.container-status-none');
         req.setRequestHeader('content-type', 'application/x-www-form-urlencoded;charset=UTF-8');
         req.send();
 
-      }
+      };

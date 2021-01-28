@@ -16,8 +16,10 @@ body {
     flex-direction: column;
     align-items: center;
 }
+
 /* серый цвет радио-кнопок */
-.custom-radio { filter: grayscale(1); }
+input[type=radio] { filter: grayscale(1); }
+
 /* табы */
 .tabs {
     width: 100%;
@@ -39,6 +41,7 @@ body {
     cursor: pointer;
     border: 1px solid #ddd;
     border-radius: 10px;
+
 }
 
 .tab-header__item.active {
@@ -93,8 +96,8 @@ body {
 }
 
 .order-container div:nth-child(2){
-    grid-column: 1 / 4;
-    grid-row: 2;
+    grid-column: 4 / -1;
+    grid-row: 1;
 }
 
 .order-container div:nth-child(3){
@@ -214,73 +217,63 @@ body {
 
 .character-container{
     display: grid;
-	grid-template-columns: repeat(1, 1fr);
+	grid-template-columns: repeat(2, 1fr);
 	grid-gap: 5px;
 }
 
 .character-container div:nth-child(1){
-    grid-column: 1 / 1;
+    grid-column: 1 / -1;
     grid-row: 1;
 
 }
+
+.character-container div:nth-child(2){
+    grid-column: 1 / -1;
+    grid-row: 2;
+}
+
+.character-container div:nth-child(3){
+    grid-column: 1 / -1;
+    grid-row: 3;
+}
+
+.dop_uslugi-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+}
+
+.dop_uslugi-container div:nth-child(1){
+    grid-column: 1 / 2;
+    grid-row: 1;
+}
+
+.dop_uslugi-container div:nth-child(2){
+    grid-column: 2 / -1;
+    grid-row: 1;
+}
+
 /* красная звездочка */
 .required-field::before {
      content: "*";
      color: red;
 }
 /* скругленный инпут */
-.city-from {
+.city-from, .city-to, .address, .terminal, .length, .width, .height , .weight, .size, .add, .term, .quantity {
     border-radius: 10px;
 }
 
-.city-to {
-    border-radius: 10px;
-}
-
-.address {
-    border-radius: 10px;
-}
-
-.terminal {
-    border-radius: 10px;
-}
-
-.length {
-    border-radius: 10px;
-}
-
-.width {
-    border-radius: 10px;
-}
-
-.height {
-    border-radius: 10px;
-}
-
-.weight {
-    border-radius: 10px;
-}
-
-.size {
-    border-radius: 10px;
-}
-
-.quantity {
-    border-radius: 10px;
-}
 /* кнопка оформить заказ */
 
-.button{
+.btn{
     text-align:center;
-}
-
-.but {
     background: gray;
     color: white;
     border-radius: 10px;
 }
+
 .negabar {
-    border-bottom: 1px dotted red;
+   text-decoration: underline solid red;
 }
 
 [data-tooltip] {
@@ -320,36 +313,29 @@ body {
   transform: translate(-50%, -5px) scale(0.5);
 }
 
-/* Tooltip arrow */
 [data-tooltip]:after {
   content: '';
   border-style: solid;
-  border-width: 5px 5px 0px 5px; /* CSS triangle */
+  border-width: 5px 5px 0px 5px;
   border-color: green transparent transparent transparent;
-  transition-duration: 0s; /* If the mouse leaves the element,
-                              the transition effects for the
-                              tooltip arrow are "turned off" */
-  transform-origin: top;   /* Orientation setting for the
-                              slide-down effect */
-  transform: translateX(-50%) scaleY(0);
+  transition-duration: 0s;
+ transform-origin: top;
+ transform: translateX(-50%) scaleY(0);
 }
 
-/* Tooltip becomes visible at hover */
 [data-tooltip]:hover:before,
 [data-tooltip]:hover:after {
   visibility: visible;
   opacity: 1;
 }
-/* Scales from 0.5 to 1 -> grow effect */
+
 [data-tooltip]:hover:before {
   transition-delay: 0.3s;
   transform: translate(-50%, -5px) scale(1);
 }
-/*
-  Arrow slide down effect only on mouseenter (NOT on mouseleave)
-*/
+
 [data-tooltip]:hover:after {
-  transition-delay: 0.5s; /* Starting after the grow effect */
+  transition-delay: 0.5s;
   transition-duration: 0.2s;
   transform: translateX(-50%) scaleY(1);
 }
@@ -377,35 +363,47 @@ body {
   transform: translateY(50%) scaleX(1);
 }
 
-.hide {
-    display: none;
-}
-
-.hide + label ~ div{
-    display: none;
-}
-
-.hide + label{
-    border-bottom: 1px dotted gray;
-    padding: 0;
-    color: gray;
-    cursor: pointer;
-    display: inline-block;
-}
-
-.hide:checked + label{
-    color: green;
-    border-bottom: 0;
-}
-.hide:checked + label +div {
-    display: block;
-    background: #efefef;
-    -moz-box-shadow: inset 3px 3px 10px #7d8e8f;
-    -webkit-box-shadow: inset 3px 3px 10px #7d8e8f;
-    box-shadow: inset 3px 3px 10px #7d8e8f;
-    padding: 10px;
-}
-
 .dop_uslugi{
-    margin: 5% 10%;
+    margin: 10px 10px;
+}
+
+
+.form__header {
+	margin-bottom: 28px;
+}
+
+.form__title {
+    font-size: 35px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: black;
+	margin-bottom: 10px;
+}
+
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
 }

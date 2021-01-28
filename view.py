@@ -206,8 +206,17 @@ def order():
     return render_template('order.html', cities=city)
 
 
+@app.route('/order', methods=['POST', 'GET'])
 def order_form():
-    pass
+    if request.method == "POST":
+        res = dbase.addNewOrder(request.form['cityto'], request.form['cityfrom'], request.form['addressfrom'], request.form['terminalfrom'], request.form['addressto'], request.form['terminalto'], request.form['date'], request.form['length'], request.form['width'], request.form['height'], request.form['weight'], request.form['size'], request.form['quantity'], request.form['all_length'], request.form['all_size'], request.form['all_quantity'], request.form['all_weight'], request.form['all_width'], request.form['all_height'], request.form['all_hard'], request.form['doc_length'], request.form['doc_height'], request.form['doc_weight'], request.form.get('transportation'), request.form['goods'], request.form.get('dop_uslugi'), request.form['senders'], request.form['recipients'], request.form.get('payment'))
+        if res:
+            flash("Вы успешно отправили заявку")
+            return redirect(url_for('order_form'))
+    else:
+         flash("Заполнены не все поля!")
+
+    return render_template('order.html')
 
 
 @app.route('/news')

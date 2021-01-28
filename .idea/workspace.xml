@@ -21,17 +21,29 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:nikita_branch" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4b8dcdc-8e0a-406b-b1de-3222f7d69e0a" name="Default Changelist" comment="заявка на забор груза">
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/cityfrom_radio.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/accordion_dop.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/cityto_radio.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/order_submit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/recipient_order.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/sender_order.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/three_face.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/calculate.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/calculate.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataBase.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataBase.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/garant_logistica.db" beforeDir="false" afterPath="$PROJECT_DIR$/garant_logistica.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gl.log" beforeDir="false" afterPath="$PROJECT_DIR$/gl.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/order.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/order.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/order.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/order.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/cityfrom_radio.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/cityfrom_radio.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js/tracking.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/tracking.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/order.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/order.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/samples/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/samples/base.html" afterDir="false" />
@@ -238,7 +250,9 @@
       <workItem from="1611311225795" duration="287000" />
       <workItem from="1611311531389" duration="680000" />
       <workItem from="1611312233019" duration="3554000" />
-      <workItem from="1611315951328" duration="9428000" />
+      <workItem from="1611315951328" duration="9753000" />
+      <workItem from="1611552658092" duration="462000" />
+      <workItem from="1611554598514" duration="72853000" />
     </task>
     <task id="LOCAL-00001" summary="проверка">
       <created>1607679574727</created>
@@ -387,7 +401,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611294010392</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="заявка на забор груза">
+      <created>1611325509722</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1611325509722</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -404,7 +425,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/danila_branch" />
+                        <option value="nikita_branch" />
                       </list>
                     </value>
                   </entry>
@@ -465,22 +486,22 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="502" y="183" key="GrepConsoleSettings/0.0.1920.1050@0.0.1920.1050" timestamp="1611320216359" />
-    <state width="1863" height="41" key="GridCell.Tab.0.bottom" timestamp="1611324825003">
+    <state width="1877" height="101" key="GridCell.Tab.0.bottom" timestamp="1611751913443">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1863" height="41" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1611324825003" />
-    <state width="1863" height="41" key="GridCell.Tab.0.center" timestamp="1611324825003">
+    <state width="1877" height="101" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1611751913443" />
+    <state width="1877" height="101" key="GridCell.Tab.0.center" timestamp="1611751913443">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1863" height="41" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1611324825003" />
-    <state width="1863" height="41" key="GridCell.Tab.0.left" timestamp="1611324825003">
+    <state width="1877" height="101" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1611751913443" />
+    <state width="1877" height="101" key="GridCell.Tab.0.left" timestamp="1611751913443">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1863" height="41" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1611324825003" />
-    <state width="1863" height="41" key="GridCell.Tab.0.right" timestamp="1611324825003">
+    <state width="1877" height="101" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1611751913443" />
+    <state width="1877" height="101" key="GridCell.Tab.0.right" timestamp="1611751913443">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1863" height="41" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1611324825003" />
+    <state width="1877" height="101" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1611751913443" />
     <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1611316049730">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -489,12 +510,16 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="870" y="171" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1611314553992" />
-    <state x="788" y="258" key="Vcs.Push.Dialog.v2" timestamp="1611294086609">
+    <state x="788" y="258" key="Vcs.Push.Dialog.v2" timestamp="1611325824908">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="788" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1611294086609" />
+    <state x="788" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1611325824908" />
+    <state x="1086" y="233" width="672" height="678" key="search.everywhere.popup" timestamp="1611644754143">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="1086" y="233" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1611644754143" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/GarantLogistica$main.coverage" NAME="main Coverage Results" MODIFIED="1611324824987" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/GarantLogistica$main.coverage" NAME="main Coverage Results" MODIFIED="1611751913427" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
