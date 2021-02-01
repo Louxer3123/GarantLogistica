@@ -31,23 +31,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4b8dcdc-8e0a-406b-b1de-3222f7d69e0a" name="Default Changelist" comment="заявка на забор груза">
-      <change afterPath="$PROJECT_DIR$/static/js/accordion_dop.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/cityto_radio.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/order_submit.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/recipient_order.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/sender_order.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/three_face.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataBase.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataBase.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/garant_logistica.db" beforeDir="false" afterPath="$PROJECT_DIR$/garant_logistica.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gl.log" beforeDir="false" afterPath="$PROJECT_DIR$/gl.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/order.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/order.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/cityfrom_radio.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/cityfrom_radio.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/tracking.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/tracking.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/order.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/order.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/samples/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/samples/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view.py" beforeDir="false" afterPath="$PROJECT_DIR$/view.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,7 +236,7 @@
       <workItem from="1611312233019" duration="3554000" />
       <workItem from="1611315951328" duration="9753000" />
       <workItem from="1611552658092" duration="462000" />
-      <workItem from="1611554598514" duration="72853000" />
+      <workItem from="1611554598514" duration="73680000" />
     </task>
     <task id="LOCAL-00001" summary="проверка">
       <created>1607679574727</created>
@@ -408,7 +392,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611325509722</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="заявка на забор груза">
+      <created>1611846077924</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1611846077924</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -486,22 +477,22 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="502" y="183" key="GrepConsoleSettings/0.0.1920.1050@0.0.1920.1050" timestamp="1611320216359" />
-    <state width="1877" height="101" key="GridCell.Tab.0.bottom" timestamp="1611751913443">
+    <state width="937" height="181" key="GridCell.Tab.0.bottom" timestamp="1611846223105">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="101" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1611751913443" />
-    <state width="1877" height="101" key="GridCell.Tab.0.center" timestamp="1611751913443">
+    <state width="937" height="181" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1611846223105" />
+    <state width="937" height="181" key="GridCell.Tab.0.center" timestamp="1611846223104">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="101" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1611751913443" />
-    <state width="1877" height="101" key="GridCell.Tab.0.left" timestamp="1611751913443">
+    <state width="937" height="181" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1611846223104" />
+    <state width="937" height="181" key="GridCell.Tab.0.left" timestamp="1611846223104">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="101" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1611751913443" />
-    <state width="1877" height="101" key="GridCell.Tab.0.right" timestamp="1611751913443">
+    <state width="937" height="181" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1611846223104" />
+    <state width="937" height="181" key="GridCell.Tab.0.right" timestamp="1611846223105">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="101" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1611751913443" />
+    <state width="937" height="181" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1611846223105" />
     <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1611316049730">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -510,10 +501,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="870" y="171" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1611314553992" />
-    <state x="788" y="258" key="Vcs.Push.Dialog.v2" timestamp="1611325824908">
+    <state x="788" y="258" key="Vcs.Push.Dialog.v2" timestamp="1611846269298">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="788" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1611325824908" />
+    <state x="788" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1611846269298" />
     <state x="1086" y="233" width="672" height="678" key="search.everywhere.popup" timestamp="1611644754143">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
