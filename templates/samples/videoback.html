@@ -1,24 +1,30 @@
 <main>
-<section class="video__bg">
-            <div class="videoplayer">
-                <video autoplay loop muted src="static/video/topvideo_zast.mp4">
+    <section class="video__bg">
+        <div class="videoplayer">
+            <video autoplay loop muted src="static/video/topvideo_zast.mp4">
             </video>
-            </div>
-            <div class="video__overlay">
-                <h1 class="video__text">Перевозка грузов, посылок, документов <br> по Росссии</h1>
-                <div class="video__buttons">
-                    <form action="{{ url_for('calculate') }}" target="_blank">
-                        <button class="overlay__button"><img class="overlay-button-img" src="static/img/calc.png" alt="Calculator" >Калькулятор</button>
-                    </form>
+        </div>
+        <div class="video__overlay">
+            <h1 class="video__text">Перевозка грузов, посылок, документов <br> по Росссии</h1>
+            <div class="video__buttons">
+                <form action="{{ url_for('calculate') }}" target="_blank">
+                    <button class="overlay__button"><img class="overlay-button-img" src="static/img/calc.png"
+                                                         alt="Calculator">Калькулятор
+                    </button>
+                </form>
 
-                    <form action="{{ url_for('order') }}" target="_blank">
-                        <button class="overlay__button"><img class="overlay-button-img" src="static/img/calc.png" alt="Order" >Расчет и оформление заказа</button>
-                    </form>
+                <form action="{{ url_for('order') }}" target="_blank">
+                    <button class="overlay__button"><img class="overlay-button-img" src="static/img/calc.png"
+                                                         alt="Order">Расчет и оформление заказа
+                    </button>
+                </form>
 
-                    <form action="{{ url_for('tracking') }}">
-                        <button class="overlay__button"><img class="overlay-button-img" src="static/img/calc.png" alt="Tracking" >Местонахождение груза</button>
-                    </form>
-                </div>
+                <form action="{{ url_for('tracking') }}">
+                    <button class="overlay__button"><img class="overlay-button-img" src="static/img/calc.png"
+                                                         alt="Tracking">Местонахождение груза
+                    </button>
+                </form>
             </div>
- </section>
-    </main>
+        </div>
+    </section>
+</main>

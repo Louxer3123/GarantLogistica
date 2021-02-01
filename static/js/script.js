@@ -1,16 +1,17 @@
 function start_input_calc(param) {
-   // console.log('click');
+    // console.log('click');
 
 }
 
-function focus_lost(param){
+function focus_lost(param) {
     //console.log('blur');
     //var current_item = document.getElementById(param);
 //    if(current_item.value != ''){
 //        //current_item.value = current_item.value + ' &sup3';
 //    }
 }
-function calc_price(){
+
+function calc_price() {
 
     var req = new XMLHttpRequest();
     var city1 = document.getElementById('cityfrom').value;
@@ -28,36 +29,36 @@ function calc_price(){
 
     json = city1 + "/" + city2 + "/" + places + "/" + weight + "/" + volume + "/" + pick + "/" + deliver;
 
-    if(city1 != '' && city2 != '' && places != '' && weight != '' && volume != ''){
-           req.onload = function(){
+    if (city1 != '' && city2 != '' && places != '' && weight != '' && volume != '') {
+        req.onload = function () {
 
             var response = JSON.parse(this.responseText);
-            if(response.price && response.timedeliver){
+            if (response.price && response.timedeliver) {
                 //console.log(response.price);
                 st_full = 0;
                 ex_full = 0;
-                if(pick == true){
+                if (pick == true) {
                     st_full = st_full + response.expedition;
                     ex_full = ex_full + response.expedition;
                     console.log(pick);
 
                 }
 
-                  if(deliver == true){
+                if (deliver == true) {
                     st_full = st_full + response.expedition;
                     ex_full = ex_full + response.expedition;
                     console.log(deliver);
                 }
 
-                   st_full = st_full + response.price;
-                   ex_full = ex_full + response.price;
+                st_full = st_full + response.price;
+                ex_full = ex_full + response.price;
 
                 st_price.innerHTML = st_full + " р.";
                 st_time.innerHTML = response.timedeliver;
                 ex_price.innerHTML = ex_full + " р.";
                 ex_time.innerHTML = response.timedeliver;
 
-            }else{
+            } else {
 
                 st_price.innerHTML = "";
                 st_time.innerHTML = "";
@@ -67,9 +68,9 @@ function calc_price(){
 
         }
 
-            req.open('GET', '/calculate/calc?' + "params=" + json, true);
-            req.setRequestHeader('content-type', 'application/x-www-form-urlencoded;charset=UTF-8');
-            req.send();
+        req.open('GET', '/calculate/calc?' + "params=" + json, true);
+        req.setRequestHeader('content-type', 'application/x-www-form-urlencoded;charset=UTF-8');
+        req.send();
 
 
     }

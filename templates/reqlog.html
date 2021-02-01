@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/stylereglogin.css') }}">
 
@@ -11,92 +11,92 @@
 </head>
 
 <body>
-    <div class="container-reg-log">
-        <div class="forms-container">
-            <div class="signin-signup">
-                <form action="{{ url_for('log') }}" method="POST" class="sign-in-form">
-                    <h2 class="title">Вход</h2>
-                    <div class="input-field">
-                        <i class="fas fa-user"></i>
-                        <input type="text" name="login" placeholder="Логин" />
-                    </div>
-                    <div class="input-field">
-                        <i class="fas fa-lock"></i>
-                        <input type="password" name="psw" placeholder="Пароль" />
-                    </div>
-                    <div>
-                        <i></i>
-                        <label>
-                            <input type="checkbox" name="remember" checked="checked" /> Запомнить меня
-                        </label>
-                    </div>
-                    <input type="submit" value="Вход" class="btn solid" />
-                    <p class="social-text">Или войдите с помощью сервисов</p>
-                    <div class="social-media">
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-google"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-vkontakte"></i>
-                        </a>
-                    </div>
-                </form>
-                <form action="{{ url_for('reg') }}" method="post" class="sign-up-form">
-                    <h2 class="title">Регистрация</h2>
-                    <div class="input-field">
-                        <i class="fas fa-user"></i>
-                        <input type="text" name="login" placeholder="Логин" />
-                    </div>
-                    <div class="input-field">
-                        <i class="fas fa-envelope"></i>
-                        <input type="email" name="email" placeholder="Email" />
-                    </div>
-                    <div class="input-field">
-                        <i class="fas fa-lock"></i>
-                        <input type="password" name="psw" placeholder="Пароль" />
-                    </div>
-                    <input type="submit" class="btn" value="Регистрация" />
-                    <p class="social-text">Или войдите с помощью сервисов</p>
-                    <div class="social-media">
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="social-icon">
-                            <i class="fab fa-vkontakte-f"></i>
-                        </a>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <div class="panels-container">
-            <div class="panel left-panel">
-                <div class="content">
-                    <h3>Впервые здесь?</h3>
-                    <p>
-                        Зарегистрируйтесь, чтбы получить доступ ко всем нашим сервисам!
-                    </p>
-                    <button class="btn transparent" id="sign-up-btn">
-              Регистрация
-            </button>
+<div class="container-reg-log">
+    <div class="forms-container">
+        <div class="signin-signup">
+            <form action="{{ url_for('log') }}" method="POST" class="sign-in-form">
+                <h2 class="title">Вход</h2>
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="login" placeholder="Логин"/>
                 </div>
-                <!--<img src="img/logo_small.jpg" class="image" alt="" />-->
-            </div>
-            <div class="panel right-panel">
-                <div class="content">
-                    <h3>Уже регистрировались?</h3>
-                    <p>
-                        Войдите в личный кабинет!
-                    </p>
-                    <button class="btn transparent" id="sign-in-btn">
-              Вход
-            </button>
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" name="psw" placeholder="Пароль"/>
                 </div>
-                <!--<img src="img/register.svg" class="image" alt="" />-->
-            </div>
+                <div>
+                    <i></i>
+                    <label>
+                        <input type="checkbox" name="remember" checked="checked"/> Запомнить меня
+                    </label>
+                </div>
+                <input type="submit" value="Вход" class="btn solid"/>
+                <p class="social-text">Или войдите с помощью сервисов</p>
+                <div class="social-media">
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-google"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-vkontakte"></i>
+                    </a>
+                </div>
+            </form>
+            <form action="{{ url_for('reg') }}" method="post" class="sign-up-form">
+                <h2 class="title">Регистрация</h2>
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="login" placeholder="Логин"/>
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" name="email" placeholder="Email"/>
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" name="psw" placeholder="Пароль"/>
+                </div>
+                <input type="submit" class="btn" value="Регистрация"/>
+                <p class="social-text">Или войдите с помощью сервисов</p>
+                <div class="social-media">
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-vkontakte-f"></i>
+                    </a>
+                </div>
+            </form>
         </div>
-
     </div>
+
+    <div class="panels-container">
+        <div class="panel left-panel">
+            <div class="content">
+                <h3>Впервые здесь?</h3>
+                <p>
+                    Зарегистрируйтесь, чтбы получить доступ ко всем нашим сервисам!
+                </p>
+                <button class="btn transparent" id="sign-up-btn">
+                    Регистрация
+                </button>
+            </div>
+            <!--<img src="img/logo_small.jpg" class="image" alt="" />-->
+        </div>
+        <div class="panel right-panel">
+            <div class="content">
+                <h3>Уже регистрировались?</h3>
+                <p>
+                    Войдите в личный кабинет!
+                </p>
+                <button class="btn transparent" id="sign-in-btn">
+                    Вход
+                </button>
+            </div>
+            <!--<img src="img/register.svg" class="image" alt="" />-->
+        </div>
+    </div>
+
+</div>
 
 <script src="/static/js/reglogin.js"></script>
 </body>

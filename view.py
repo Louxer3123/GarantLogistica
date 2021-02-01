@@ -13,7 +13,6 @@ from app import app, login_manager
 from UserData import UserLogin
 from DataBase import DataBase
 
-
 logger = logging.getLogger('view')
 logger.setLevel(logging.DEBUG)
 handler = logging.FileHandler('gl.log', encoding='utf-8')
@@ -33,7 +32,7 @@ def load_user(user_id):
 def cookie():
     if not request.cookies.get('foo'):
         res = make_response('Setting a cookie')
-        res.set_cookie('foo', 'bar', max_age=60*60*24*365*2)
+        res.set_cookie('foo', 'bar', max_age=60 * 60 * 24 * 365 * 2)
     else:
         res = make_response("Value of cookie foo is {}".format(request.cookies.get('foo')))
     return res
@@ -79,6 +78,8 @@ def index():
 @app.route('/about')
 def about():
     return render_template("about.html")
+
+
 # Основные страницы -
 
 
@@ -101,7 +102,8 @@ def tracking_status():
     track = request.args.get('tracknumber')
     con = sql.connect("garant_logistica.db")
     cur = con.cursor()
-    cur.execute("SELECT status, date_status_users, payment, date_delivery, direction FROM order_status WHERE track = '" + track + "'")
+    cur.execute(
+        "SELECT status, date_status_users, payment, date_delivery, direction FROM order_status WHERE track = '" + track + "'")
     result = cur.fetchall()
     if len(result) != 0:
         response = {"order_status": result[0][0],
@@ -112,6 +114,8 @@ def tracking_status():
     else:
         response = {"order_status": None, "date_order_users": None}
     return json.dumps(response)
+
+
 # Отслеживание -
 
 
@@ -127,8 +131,9 @@ def calc_price():
 
     con = sql.connect("garant_logistica.db")
     cur = con.cursor()
-    #strtoexec = "SELECT city1, city2, weight, price, timedeliver FROM prices WHERE city1 = '" + s[0] + "' AND city2 = '" + s[1] + "' AND weight >= " + str(maxweight)
-    cur.execute("SELECT city1, city2, weight, price, timedeliver, expedition FROM prices WHERE city1 = '" + s[0] + "' AND city2 = '" + s[1] + "' AND weight >= " + str(maxweight))
+    # strtoexec = "SELECT city1, city2, weight, price, timedeliver FROM prices WHERE city1 = '" + s[0] + "' AND city2 = '" + s[1] + "' AND weight >= " + str(maxweight)
+    cur.execute("SELECT city1, city2, weight, price, timedeliver, expedition FROM prices WHERE city1 = '" + s[
+        0] + "' AND city2 = '" + s[1] + "' AND weight >= " + str(maxweight))
     result = cur.fetchall()
     if len(result) != 0:
         response = {"city1": result[0][0],
@@ -138,16 +143,16 @@ def calc_price():
                     "timedeliver": result[0][4],
                     "expedition": result[0][5]}
     else:
-        response = {"city1": None, "city2": None, "weight": None, "price": None, "timedeliver": None, "expedition": None}
+        response = {"city1": None, "city2": None, "weight": None, "price": None, "timedeliver": None,
+                    "expedition": None}
     return json.dumps(response)
-
 
 
 # Регистрация +
 @app.route('/reqlog', methods=["POST", "GET"])
 def reqlog_enter():
     if current_user.is_authenticated:
-        #return redirect(url_for('profile'))
+        # return redirect(url_for('profile'))
         return render_template('profile.html')
     return render_template('reqlog.html')
 
@@ -184,6 +189,8 @@ def log():
 
         flash("Неверная пара логин/пароль")
     return render_template('reqlog.html')
+
+
 # Регистрация -
 
 
@@ -198,7 +205,7 @@ def profile(param=''):
 
 
 @app.route('/order')
-#@login_required
+# @login_required
 def order():
     db = get_db()
     dbase = DataBase(db)
@@ -209,12 +216,22 @@ def order():
 @app.route('/order', methods=['POST', 'GET'])
 def order_form():
     if request.method == "POST":
-        res = dbase.addNewOrder(request.form['cityto'], request.form['cityfrom'], request.form['addressfrom'], request.form['terminalfrom'], request.form['addressto'], request.form['terminalto'], request.form['date'], request.form['length'], request.form['width'], request.form['height'], request.form['weight'], request.form['size'], request.form['quantity'], request.form['all_length'], request.form['all_size'], request.form['all_quantity'], request.form['all_weight'], request.form['all_width'], request.form['all_height'], request.form['all_hard'], request.form['doc_length'], request.form['doc_height'], request.form['doc_weight'], request.form.get('transportation'), request.form['goods'], request.form.get('dop_uslugi'), request.form['senders'], request.form['recipients'], request.form.get('payment'))
+        res = dbase.addNewOrder(request.form['cityto'], request.form['cityfrom'], request.form['addressfrom'],
+                                request.form['terminalfrom'], request.form['addressto'], request.form['terminalto'],
+                                request.form['date'], request.form['length'], request.form['width'],
+                                request.form['height'], request.form['weight'], request.form['size'],
+                                request.form['quantity'], request.form['all_length'], request.form['all_size'],
+                                request.form['all_quantity'], request.form['all_weight'], request.form['all_width'],
+                                request.form['all_height'], request.form['all_hard'], request.form['doc_length'],
+                                request.form['doc_height'], request.form['doc_weight'],
+                                request.form.get('transportations'), request.form['goods'],
+                                request.form.get('dop_uslugi'), request.form['senders'], request.form['recipients'],
+                                request.form.get('payment'))
         if res:
             flash("Вы успешно отправили заявку")
             return redirect(url_for('order_form'))
     else:
-         flash("Заполнены не все поля!")
+        flash("Заполнены не все поля!")
 
     return render_template('order.html')
 

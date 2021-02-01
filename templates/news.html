@@ -14,11 +14,12 @@
     <h2 class="news-list">Список статей</h2>
     <ul class="article-list">
         {% for p in posts %}
-            <li class="article-li">
-                <h3 class="article-title-h3"><a class="article-a" href="{{ url_for('show_news', id_news=p.id)}}">{{p.title}}</a></h3>
-                <p class="article-annonce">{{ p.text[:50]}}...</p>
-            </li>
-            <hr>
+        <li class="article-li">
+            <h3 class="article-title-h3"><a class="article-a"
+                                            href="{{ url_for('show_news', id_news=p.id)}}">{{p.title}}</a></h3>
+            <p class="article-annonce">{{ p.text[:50]}}...</p>
+        </li>
+        <hr>
         {% endfor %}
     </ul>
 </section>

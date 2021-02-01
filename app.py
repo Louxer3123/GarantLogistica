@@ -16,4 +16,3 @@ app.register_blueprint(admin, url_prefix='/admin')
 
 app.config.update(dict(db=os.path.join(app.root_path, 'garant_logistica.db')))
 login_manager = LoginManager(app)
-

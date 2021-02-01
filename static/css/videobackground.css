@@ -53,7 +53,8 @@ main .video__bg .video__overlay .video__text {
     padding-top: 20vh;
 }
 
-main .video__bg .video__overlay .video__buttons {}
+main .video__bg .video__overlay .video__buttons {
+}
 
 main .spinning__cards {
     background-color: #fff;
@@ -109,9 +110,11 @@ form:hover {
     .video__buttons {
         margin-top: 5%;
     }
+
     .overlay-button-img {
-    display: none;
+        display: none;
     }
+
     form {
         width: 30%;
     }
@@ -119,7 +122,7 @@ form:hover {
 
 @media screen and (max-width: 625px) {
     .video__bg {
-    display: none;
+        display: none;
     }
 }
 
@@ -127,9 +130,11 @@ form:hover {
     .video__buttons {
         margin-top: 5%;
     }
+
     .overlay-button-img {
         display: none;
     }
+
     form {
         width: 30%;
     }

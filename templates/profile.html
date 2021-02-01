@@ -6,62 +6,62 @@
 {% include 'samples/header.html' %}
 
 {% block content %}
-   <section class="profile-section">
-        <div class="profile-nav">
-            <div class="col-6 col-md">
-                <h4>Основное</h4>
-                <ul class="list-unstyled text-small">
-                    <li><a class="profile-a" href="/profile/myorders">Мои заказы</a></li>
-                    <li><a class="profile-a" href="/profile/ordersreports">Отчеты по заказам</a></li>
-                    <li><a class="profile-a" href="/profile/settlements">Взаиморасчеты</a></li>
-                    <li><a class="profile-a" href="/profile/appeals">Обращения</a></li>
-                </ul>
-            </div>
-            <div class="col-6 col-md">
-                <h4>Настройки</h4>
-                <ul class="list-unstyled text-small">
-                    <li><a class="profile-a" href="/profile/settings">Профиль</a></li>
-                    <li><a class="profile-a" href="/profile/notifications">Уведомления</a></li>
-                    <li><a class="profile-a" href="/profile/security">Безопасность</a></li>
-                </ul>
-            </div>
-            <div class="col-6 col-md">
-                <h4>Дополнительно</h4>
-                <ul class="list-unstyled text-small">
-                    <li><a class="profile-a" href="/profile/mybonuses">Мои бонусы</a></li>
-                    <li><a class="profile-a" href="/profile/managercontact">Связь с менеджером</a></li>
-                    <li><a class="profile-a" href="/profile/adressbook">Адресная книга</a></li>
-                </ul>
-            </div>
+<section class="profile-section">
+    <div class="profile-nav">
+        <div class="col-6 col-md">
+            <h4>Основное</h4>
+            <ul class="list-unstyled text-small">
+                <li><a class="profile-a" href="/profile/myorders">Мои заказы</a></li>
+                <li><a class="profile-a" href="/profile/ordersreports">Отчеты по заказам</a></li>
+                <li><a class="profile-a" href="/profile/settlements">Взаиморасчеты</a></li>
+                <li><a class="profile-a" href="/profile/appeals">Обращения</a></li>
+            </ul>
         </div>
-
-        <div class="profile-content">
-            {% if loadpage=='main' %}
-                {% include 'profile/profile_main.html' %}
-            {% elif loadpage=='ordersreports' %}
-                {% include 'profile/profile_ordersreports.html' %}
-            {% elif loadpage=='settlements' %}
-                {% include 'profile/profile_settlements.html' %}
-            {% elif loadpage=='appeals' %}
-                {% include 'profile/profile_appeals.html' %}
-
-            {% elif loadpage=='settings' %}
-                {% include 'profile/profile_settings.html' %}
-            {% elif loadpage=='notifications' %}
-                {% include 'profile/profile_notifications.html' %}
-            {% elif loadpage=='security' %}
-                {% include 'profile/profile_security.html' %}
-
-            {% elif loadpage=='mybonuses' %}
-                {% include 'profile/profile_mybonuses.html' %}
-            {% elif loadpage=='managercontact' %}
-                {% include 'profile/profile_managercontact.html' %}
-            {% elif loadpage=='adressbook' %}
-                {% include 'profile/profile_adressbook.html' %}
-
-            {% else %}
-                {% include 'profile/profile_main.html' %}
-            {% endif %}
+        <div class="col-6 col-md">
+            <h4>Настройки</h4>
+            <ul class="list-unstyled text-small">
+                <li><a class="profile-a" href="/profile/settings">Профиль</a></li>
+                <li><a class="profile-a" href="/profile/notifications">Уведомления</a></li>
+                <li><a class="profile-a" href="/profile/security">Безопасность</a></li>
+            </ul>
         </div>
-    </section>
+        <div class="col-6 col-md">
+            <h4>Дополнительно</h4>
+            <ul class="list-unstyled text-small">
+                <li><a class="profile-a" href="/profile/mybonuses">Мои бонусы</a></li>
+                <li><a class="profile-a" href="/profile/managercontact">Связь с менеджером</a></li>
+                <li><a class="profile-a" href="/profile/adressbook">Адресная книга</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="profile-content">
+        {% if loadpage=='main' %}
+        {% include 'profile/profile_main.html' %}
+        {% elif loadpage=='ordersreports' %}
+        {% include 'profile/profile_ordersreports.html' %}
+        {% elif loadpage=='settlements' %}
+        {% include 'profile/profile_settlements.html' %}
+        {% elif loadpage=='appeals' %}
+        {% include 'profile/profile_appeals.html' %}
+
+        {% elif loadpage=='settings' %}
+        {% include 'profile/profile_settings.html' %}
+        {% elif loadpage=='notifications' %}
+        {% include 'profile/profile_notifications.html' %}
+        {% elif loadpage=='security' %}
+        {% include 'profile/profile_security.html' %}
+
+        {% elif loadpage=='mybonuses' %}
+        {% include 'profile/profile_mybonuses.html' %}
+        {% elif loadpage=='managercontact' %}
+        {% include 'profile/profile_managercontact.html' %}
+        {% elif loadpage=='adressbook' %}
+        {% include 'profile/profile_adressbook.html' %}
+
+        {% else %}
+        {% include 'profile/profile_main.html' %}
+        {% endif %}
+    </div>
+</section>
 {% endblock %}

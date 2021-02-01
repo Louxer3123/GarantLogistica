@@ -10,29 +10,29 @@
 <title>:hover</title>
 
 <script type="text/javascript">
-        $(function() {
+    $(function () {
         var all_city = []
-        {%for city in cities%}
+        {%for city in cities %}
 
         all_city.push('{{city[0]}}')
 
-        {% endfor %}
-            $('#cityto').autocomplete({
-                source: function(request, response) {
+        {%endfor %}
+        $('#cityto').autocomplete({
+            source: function (request, response) {
                 var results = $.ui.autocomplete.filter(all_city, request.term);
 
                 response(results.slice(0, 10));
             }
-            })
+        })
 
-            $('#cityfrom').autocomplete({
-                source: function(request, response) {
+        $('#cityfrom').autocomplete({
+            source: function (request, response) {
                 var results = $.ui.autocomplete.filter(all_city, request.term);
 
                 response(results.slice(0, 10));
             }
-            })
-        });
+        })
+    });
 </script>
 
 
@@ -44,40 +44,43 @@
         <div class="container order-container">
             <div class="grid-container center-items">
                 <form action="{{ url_for('order_form') }}" method="POST" name="order">
-                <p>Откуда<span class="required-field"></span></p>
+                    <p>Откуда<span class="required-field"></span></p>
                     <label for="cityfrom"></label>
-                        <input id="cityfrom" type="text" class="city-from" name="cityfrom">
-                            <p><input type="radio" class="ShowOrHide" value="myDivId1" name="to">От адреса</p>
-                            <p><input type="radio" class="ShowOrHide" value="myDivId2" name="to">От терминала</p>
-                                <div id="myDivId1" class="ShowOrHide" style="display: none;">
-                                    <p>Адрес<span class="required-field"></span><input class="add" type="text" name="addressfrom"></p>
-                                </div>
+                    <input id="cityfrom" type="text" class="city-from" name="cityfrom">
+                    <p><input type="radio" class="ShowOrHide" value="myDivId1" name="to">От адреса</p>
+                    <p><input type="radio" class="ShowOrHide" value="myDivId2" name="to">От терминала</p>
+                    <div id="myDivId1" class="ShowOrHide" style="display: none;">
+                        <p>Адрес<span class="required-field"></span><input class="add" type="text" name="addressfrom">
+                        </p>
+                    </div>
 
-                                <div id="myDivId2" class="ShowOrHide" style="display: none;">
-                                    <p>Терминал<span class="required-field"></span><input class="term" type="text" name="terminalfrom"></p>
-                                </div>
+                    <div id="myDivId2" class="ShowOrHide" style="display: none;">
+                        <p>Терминал<span class="required-field"></span><input class="term" type="text"
+                                                                              name="terminalfrom"></p>
+                    </div>
             </div>
 
             <div class="grid-container center-items">
                 <p>Куда<span class="required-field"></span></p>
-                    <label for="cityto"></label>
-                        <input id="cityto" type="text" class="city-to" name="cityto">
-                            <p><input type="radio" class="ShowOrHide1" value="myDivId3" name="from">До адреса</p>
-                            <p><input type="radio" class="ShowOrHide1" value="myDivId4" name="from">До терминала</p>
-                                <div id="myDivId3" class="ShowOrHide1" style="display: none;">
-                                    <p>Адрес<span class="required-field"></span><input class="add" type="text" name="addressto"></p>
-                                </div>
+                <label for="cityto"></label>
+                <input id="cityto" type="text" class="city-to" name="cityto">
+                <p><input type="radio" class="ShowOrHide1" value="myDivId3" name="from">До адреса</p>
+                <p><input type="radio" class="ShowOrHide1" value="myDivId4" name="from">До терминала</p>
+                <div id="myDivId3" class="ShowOrHide1" style="display: none;">
+                    <p>Адрес<span class="required-field"></span><input class="add" type="text" name="addressto"></p>
+                </div>
 
-                                <div id="myDivId4" class="ShowOrHide1" style="display: none;">
-                                    <p>Терминал<span class="required-field"></span><input class="term" type="text" name="terminalto"></p>
-                                </div>
+                <div id="myDivId4" class="ShowOrHide1" style="display: none;">
+                    <p>Терминал<span class="required-field"></span><input class="term" type="text" name="terminalto">
+                    </p>
+                </div>
             </div>
         </div>
 
-            <div class="grid-container center-items">
-                <p>Дата забора груза<span class="required-field"></span></p>
-                    <input  type="date" class="date" name="date">
-            </div>
+        <div class="grid-container center-items">
+            <p>Дата забора груза<span class="required-field"></span></p>
+            <input type="date" class="date" name="date">
+        </div>
         </div>
 
         <div class="block-price">
@@ -115,99 +118,101 @@
             <ul class="tab-content">
                 <li class="tab-content__item js-tab-content active" data-tab="1">
                     <div class="container place-container">
-                         <div class="grid-container center-items">
+                        <div class="grid-container center-items">
                             <p>Длина<span class="required-field"></span></p>
-                             <input type="number" class="length" name="length" >
-                         </div>
+                            <input type="number" class="length" name="length">
+                        </div>
 
                         <div class="grid-container center-items">
                             <p>Ширина<span class="required-field"></span></p>
-                             <input type="number" class="width" name="width" >
-                         </div>
+                            <input type="number" class="width" name="width">
+                        </div>
 
                         <div class="grid-container center-items">
                             <p>Высота<span class="required-field"></span></p>
-                             <input type="number" class="height" name="height" >
-                         </div>
+                            <input type="number" class="height" name="height">
+                        </div>
 
                         <div class="grid-container center-items">
                             <p>Вес<span class="required-field"></span></p>
-                             <input type="number" class="weight" name="weight" >
-                         </div>
+                            <input type="number" class="weight" name="weight">
+                        </div>
 
                         <div class="grid-container center-items">
                             <p>Объем<span class="required-field"></span></p>
-                             <input type="number" class="size" name="size" >
-                         </div>
+                            <input type="number" class="size" name="size">
+                        </div>
 
                         <div class="grid-container center-items">
                             <p>Кол-во<span class="required-field"></span></p>
-                             <input type="number" class="quantity" name="quantity" >
-                         </div>
+                            <input type="number" class="quantity" name="quantity">
+                        </div>
                     </div>
                 </li>
                 <li class="tab-content__item js-tab-content" data-tab="2">
                     <div class="container places-container">
-                         <div class="grid-container center-items">
+                        <div class="grid-container center-items">
                             <p>Общий вес<span class="required-field"></span></p>
-                             <input type="number" class="length" name="all_length" >
-                         </div>
+                            <input type="number" class="length" name="all_length">
+                        </div>
 
                         <div class="grid-container center-items">
                             <p>Общий объем<span class="required-field"></span></p>
-                             <input type="number" class="size" name="all_size" >
-                         </div>
+                            <input type="number" class="size" name="all_size">
+                        </div>
 
                         <div class="grid-container center-items">
                             <p>Кол-во мест<span class="required-field"></span></p>
-                             <input type="number" class="quantity" name="all_quantity" >
-                         </div>
+                            <input type="number" class="quantity" name="all_quantity">
+                        </div>
 
                         <div class="grid-container center-items">
                             <p>Самое длинное<span class="required-field"></span></p>
-                             <input type="number" class="weight" name="all_weight" >
-                         </div>
+                            <input type="number" class="weight" name="all_weight">
+                        </div>
 
                         <div class="grid-container center-items">
                             <p>Самое широкое<span class="required-field"></span></p>
-                             <input type="number" class="width" name="all_width" >
-                         </div>
+                            <input type="number" class="width" name="all_width">
+                        </div>
 
                         <div class="grid-container center-items">
                             <p>Самое высокое<span class="required-field"></span></p>
-                             <input type="number" class="height" name="all_height" >
-                         </div>
+                            <input type="number" class="height" name="all_height">
+                        </div>
                         <div class="grid-container center-items">
                             <p>Самое тяжелое<span class="required-field"></span></p>
-                             <input type="number" class="hard" name="all_hard" >
-                         </div>
+                            <input type="number" class="hard" name="all_hard">
+                        </div>
                         <div class="grid-container center-items">
-                            <p class="negabar" data-tooltip="Грузовое место считается негабаритным, если вес места не менее 500 кг или одно из измерений больше либо равно 3 метров" data-tooltip-location="right">Негабарит!</p>
-                         </div>
+                            <p class="negabar"
+                               data-tooltip="Грузовое место считается негабаритным, если вес места не менее 500 кг или одно из измерений больше либо равно 3 метров"
+                               data-tooltip-location="right">Негабарит!</p>
+                        </div>
                     </div>
                 </li>
                 <li class="tab-content__item js-tab-content" data-tab="3">
-                     <div class="container place-container">
-                         <div class="grid-container center-items">
+                    <div class="container place-container">
+                        <div class="grid-container center-items">
                             <p>Длина(см)<span class="required-field"></span></p>
-                             <input type="number" class="length" placeholder="max 31" name="doc_length" >
-                         </div>
+                            <input type="number" class="length" placeholder="max 31" name="doc_length">
+                        </div>
 
                         <div class="grid-container center-items">
                             <p>Ширина(см)<span class="required-field"></span></p>
-                             <input type="number" class="width" placeholder="max 25" name="doc_length" >
-                         </div>
+                            <input type="number" class="width" placeholder="max 25" name="doc_length">
+                        </div>
 
                         <div class="grid-container center-items">
                             <p>Высота(см)<span class="required-field"></span></p>
-                             <input type="number" class="height" placeholder="max 4" name="doc_height" >
-                         </div>
+                            <input type="number" class="height" placeholder="max 4" name="doc_height">
+                        </div>
 
                         <div class="grid-container center-items">
                             <p>Вес(кг)<span class="required-field"></span></p>
-                             <input type="number" class="weight" placeholder="max 2" name="doc_weight">
-                         </div>
-                     </div>
+                            <input type="number" class="weight" placeholder="max 2" name="doc_weight">
+                        </div>
+                    </div>
                 </li>
             </ul>
         </div>&thinsp;
@@ -215,50 +220,50 @@
         <div>
             <strong>Вид перевозки</strong>
             <select required>
-                <option value="" name="transporation">Стандарт</option>
-                <option value="" name="transporation">Экспресс</option>
-                <option value="" name="transporation">Конверт</option>
+                <option  name="transporations">Стандарт</option>
+                <option  name="transporations1">Экспресс</option>
+                <option name="transporations2">Конверт</option>
             </select>
         </div>
-            <br/>
+        <br/>
         <div class="container character-container">
-                <div class="grid-container center-items">
-        <div>
-            <strong>Характер груза<span class="required-field"></span>
-                <input type="text" class="goods" name="goods"></strong>
-            </div>
+            <div class="grid-container center-items">
+                <div>
+                    <strong>Характер груза<span class="required-field"></span>
+                        <input type="text" class="goods" name="goods"></strong>
+                </div>
             </div>
 
 
-                <div class="dop_uslugi">
-                    <button class="accordion"><strong>Дополнительные услуги</strong></button>
-                    <div class="panel">
-                        <br/>
-                <p>Объявленная стоимость<input type="text" name="declared_value">р.</p>
-                   </p> <input type="checkbox" name="dop_uslugi">Страховка</p>
-                <p><input type="checkbox" name="dop_uslugi">Возврат сопроводительных документов</p>
-               <p><input type="checkbox" name="dop_uslugi">Отправка сопроводительных документов</p>
-                <p><input type="checkbox" name="dop_uslugi">Погрузо-разгрузочные работы у отправителя</p>
-                <p><input type="checkbox" name="dop_uslugi">Погрузо-разгрузочные работы у получателя</p>
-                <p><input type="checkbox" name="dop_uslugi">Пропуск на территорию отправителя</p>
-                <p><input type="checkbox" name="dop_uslugi">Запись на отгрузку</p>
-                <p><input type="checkbox" name="dop_uslugi">Платный въезд на территорию отправителя</p>
-                <p><input type="checkbox" name="dop_uslugi">Внутренний номер отгрузки</p>
-                   <p> <input type="checkbox" name="dop_uslugi">Наложенный платеж</p>
-                <p><input type="checkbox" name="dop_uslugi">Заезд на второй адрес</p>
-                <p><input type="checkbox" name="dop_uslugi">Подтверждение доставки</p>
-                <p><input type="checkbox" name="dop_uslugi">Доверенность</p>
-                <p><input type="checkbox" name="dop_uslugi">Предварительный звонок</p>
-                        <br/>
-                <p>Упаковка груза</p>
-                <p><input type="checkbox" name="dop_uslugi">Жесткая упаковка</p>
-                <p><input type="checkbox" name="dop_uslugi">Паллетный борт</p>
-                <p><input type="checkbox" name="dop_uslugi">Мешок</p>
-                <p><input type="checkbox" name="dop_uslugi">Картонная коробка</p>
-               <p> <input type="checkbox" name="dop_uslugi">Паллет</p>
-               <p><input type="checkbox" name="dop_uslugi">Стреппинг</p>
-               <p> <input type="checkbox" name="dop_uslugi">Стрейч-пленка</p>
-               <p> <input type="checkbox" name="dop_uslugi">Воздушно-пузырьковая пленка</p>
+            <div class="dop_uslugi">
+                <button class="accordion"><strong>Дополнительные услуги</strong></button>
+                <div class="panel">
+                    <br/>
+                    <p>Объявленная стоимость<input type="text" name="declared_value">р.</p>
+                    </p> <input type="checkbox" name="dop_uslugi">Страховка</p>
+                    <p><input type="checkbox" name="dop_uslugi1">Возврат сопроводительных документов</p>
+                    <p><input type="checkbox" name="dop_uslugi2">Отправка сопроводительных документов</p>
+                    <p><input type="checkbox" name="dop_uslugi3">Погрузо-разгрузочные работы у отправителя</p>
+                    <p><input type="checkbox" name="dop_uslugi4">Погрузо-разгрузочные работы у получателя</p>
+                    <p><input type="checkbox" name="dop_uslugi5">Пропуск на территорию отправителя</p>
+                    <p><input type="checkbox" name="dop_uslugi6">Запись на отгрузку</p>
+                    <p><input type="checkbox" name="dop_uslugi7">Платный въезд на территорию отправителя</p>
+                    <p><input type="checkbox" name="dop_uslugi8">Внутренний номер отгрузки</p>
+                    <p><input type="checkbox" name="dop_uslugi9">Наложенный платеж</p>
+                    <p><input type="checkbox" name="dop_uslugi10">Заезд на второй адрес</p>
+                    <p><input type="checkbox" name="dop_uslugi11">Подтверждение доставки</p>
+                    <p><input type="checkbox" name="dop_uslugi12">Доверенность</p>
+                    <p><input type="checkbox" name="dop_uslugi13">Предварительный звонок</p>
+                    <br/>
+                    <p>Упаковка груза</p>
+                    <p><input type="checkbox" name="dop_uslugi14">Жесткая упаковка</p>
+                    <p><input type="checkbox" name="dop_uslugi15">Паллетный борт</p>
+                    <p><input type="checkbox" name="dop_uslugi16">Мешок</p>
+                    <p><input type="checkbox" name="dop_uslugi17">Картонная коробка</p>
+                    <p><input type="checkbox" name="dop_uslugi18">Паллет</p>
+                    <p><input type="checkbox" name="dop_uslugi19">Стреппинг</p>
+                    <p><input type="checkbox" name="dop_uslugi20">Стрейч-пленка</p>
+                    <p><input type="checkbox" name="dop_uslugi21">Воздушно-пузырьковая пленка</p>
                 </div>
 
 
@@ -268,18 +273,18 @@
                     <input type="radio" class="ShowOrHide2" value="myDivId5" name="sender">Физическое лицо
                     <input type="radio" class="ShowOrHide2" value="myDivId6" name="sender">Юридическое лицо
                     <div id="myDivId5" class="ShowOrHide2" style="display: none;">
-                        <input type="text" placeholder="ФИО" name="senders" >
-                        <input type="text" placeholder="Серия и номер паспорта" name="senders">
-                        <input type="text" placeholder="E-mail" name="senders">
-                        <input type="text" placeholder="Контактный телефон" name="senders">
+                        <input type="text" placeholder="ФИО" name="senders">
+                        <input type="text" placeholder="Серия и номер паспорта" name="senders1">
+                        <input type="text" placeholder="E-mail" name="senders2">
+                        <input type="text" placeholder="Контактный телефон" name="senders3">
                     </div>
 
                     <div id="myDivId6" class="ShowOrHide2" style="display: none;">
-                        <input type="text" placeholder="Название компании" name="senders">
-                        <input type="text" placeholder="ИНН" name="senders">
-                        <input type="text" placeholder="Контактное лицо" name="senders">
-                        <input type="text" placeholder="Контактный телефон" name="senders">
-                        <input type="text" placeholder="E-mail" name="senders">
+                        <input type="text" placeholder="Название компании" name="senders4">
+                        <input type="text" placeholder="ИНН" name="senders5">
+                        <input type="text" placeholder="Контактное лицо" name="senders6">
+                        <input type="text" placeholder="Контактный телефон" name="senders7">
+                        <input type="text" placeholder="E-mail" name="senders8">
                     </div>
                     <br/>
                     <p>Плательщик</p>
@@ -293,21 +298,21 @@
 
 
                     <p>Получатель</p>
-                    <input type="radio" class="ShowOrHide3" value="myDivId7" name="recipients">Физическое лицо
-                    <input type="radio" class="ShowOrHide3" value="myDivId8" name="recipients">Юридическое лицо
+                    <input type="radio" class="ShowOrHide3" value="myDivId7" name="recipient">Физическое лицо
+                    <input type="radio" class="ShowOrHide3" value="myDivId8" name="recipient">Юридическое лицо
                     <div id="myDivId7" class="ShowOrHide3" style="display: none;">
                         <input type="text" placeholder="ФИО" name="recipients">
-                        <input type="text" placeholder="Серия и номер паспорта" name="recipients">
-                        <input type="text" placeholder="E-mail" name="recipients">
-                        <input type="text" placeholder="Контактный телефон" name="recipients">
+                        <input type="text" placeholder="Серия и номер паспорта" name="recipients1">
+                        <input type="text" placeholder="E-mail" name="recipients2">
+                        <input type="text" placeholder="Контактный телефон" name="recipients3">
                     </div>
 
                     <div id="myDivId8" class="ShowOrHide3" style="display: none;">
-                        <input type="text" placeholder="Название компании" name="recipients">
-                        <input type="text" placeholder="ИНН" name="recipients">
-                        <input type="text" placeholder="Контактное лицо" name="recipients">
-                        <input type="text" placeholder="Контактный телефон" name="recipients">
-                        <input type="text" placeholder="E-mail" name="recipients">
+                        <input type="text" placeholder="Название компании" name="recipients4">
+                        <input type="text" placeholder="ИНН" name="recipients5">
+                        <input type="text" placeholder="Контактное лицо" name="recipients6">
+                        <input type="text" placeholder="Контактный телефон" name="recipients7">
+                        <input type="text" placeholder="E-mail" name="recipients8">
                     </div>
 
 
@@ -322,24 +327,23 @@
                     </div>
                     <br/>
                     <div>
-            <strong>Форма оплаты</strong>
-            <select required>
-                <option value="" name="payment">Наличный расчет</option>
-                <option value="">Безналичный расчет</option>
-            </select>
-        </div>
-
+                        <strong>Форма оплаты</strong>
+                        <select required>
+                            <option  name="payment">Наличный расчет</option>
+                            <option name="payment1">Безналичный расчет</option>
+                        </select>
                     </div>
+
+                </div>
             </div>
             <button class="btn" id="submit">
-              Оформить заказ
+                Оформить заказ
             </button>
 
-    </div>
+        </div>
         </form>
     </section>
 </section>
-
 
 
 <script src="/static/js/cityfrom_radio.js"></script>

@@ -30,4 +30,26 @@
 [LINE:106]# 2021-01-27 13:33:17,152 - ERROR - FDataBase - Ошибка добавления заявки в БД no such table: orders
 [LINE:106]# 2021-01-27 13:33:42,070 - ERROR - FDataBase - Ошибка добавления заявки в БД no such table: orders
 [LINE:106]# 2021-01-27 13:35:38,342 - ERROR - FDataBase - Ошибка добавления заявки в БД table orders has 30 columns but 5 values were supplied
-[LINE:106]# 2021-01-27 13:41:55,915 - ERROR - FDataBase - Ошибка добавления заявки в БД database is locked
+[LINE:106]# 2021-01-27 13:41:55,915 - ERROR - FDataBase - Ошибка добавления заявки в БД database is locked[LINE:110]# 2021-02-01 12:59:14,949 - ERROR - FDataBase - Ошибка добавления заявки в БД table orders has 69 columns but 30 values were supplied
+[LINE:110]# 2021-02-01 12:59:20,724 - ERROR - FDataBase - Ошибка добавления заявки в БД table orders has 69 columns but 30 values were supplied
+[LINE:110]# 2021-02-01 12:59:48,225 - ERROR - FDataBase - Ошибка добавления заявки в БД table orders has 69 columns but 30 values were supplied
+[LINE:110]# 2021-02-01 12:59:49,893 - ERROR - FDataBase - Ошибка добавления заявки в БД table orders has 69 columns but 30 values were supplied
+[LINE:110]# 2021-02-01 13:00:44,072 - ERROR - FDataBase - Ошибка добавления заявки в БД table orders has 69 columns but 30 values were supplied
+[LINE:110]# 2021-02-01 13:00:46,325 - ERROR - FDataBase - Ошибка добавления заявки в БД table orders has 69 columns but 30 values were supplied
+[LINE:110]# 2021-02-01 13:00:49,429 - ERROR - FDataBase - Ошибка добавления заявки в БД table orders has 69 columns but 30 values were supplied
+[LINE:110]# 2021-02-01 13:00:51,262 - ERROR - FDataBase - Ошибка добавления заявки в БД table orders has 69 columns but 30 values were supplied
+[LINE:110]# 2021-02-01 13:00:56,536 - ERROR - FDataBase - Ошибка добавления заявки в БД table orders has 69 columns but 30 values were supplied
+[LINE:110]# 2021-02-01 13:00:58,726 - ERROR - FDataBase - Ошибка добавления заявки в БД table orders has 69 columns but 30 values were supplied
+[LINE:110]# 2021-02-01 13:01:00,596 - ERROR - FDataBase - Ошибка добавления заявки в БД table orders has 69 columns but 30 values were supplied
+[LINE:110]# 2021-02-01 13:12:40,593 - ERROR - FDataBase - Ошибка добавления заявки в БД table orders has 69 columns but 30 values were supplied
+[LINE:110]# 2021-02-01 13:12:41,965 - ERROR - FDataBase - Ошибка добавления заявки в БД table orders has 69 columns but 30 values were supplied
+[LINE:110]# 2021-02-01 13:12:56,504 - ERROR - FDataBase - Ошибка добавления заявки в БД table orders has 69 columns but 30 values were supplied
+[LINE:110]# 2021-02-01 13:54:00,802 - ERROR - FDataBase - Ошибка добавления заявки в БД table orders has 69 columns but 30 values were supplied
+[LINE:110]# 2021-02-01 13:54:03,895 - ERROR - FDataBase - Ошибка добавления заявки в БД table orders has 69 columns but 30 values were supplied
+[LINE:110]# 2021-02-01 13:54:06,608 - ERROR - FDataBase - Ошибка добавления заявки в БД table orders has 69 columns but 30 values were supplied
+[LINE:110]# 2021-02-01 13:55:05,395 - ERROR - FDataBase - Ошибка добавления заявки в БД table orders has 69 columns but 30 values were supplied
+[LINE:110]# 2021-02-01 13:55:06,828 - ERROR - FDataBase - Ошибка добавления заявки в БД table orders has 69 columns but 30 values were supplied
+[LINE:110]# 2021-02-01 13:56:37,585 - ERROR - FDataBase - Ошибка добавления заявки в БД table orders has 69 columns but 30 values were supplied
+[LINE:110]# 2021-02-01 13:56:39,410 - ERROR - FDataBase - Ошибка добавления заявки в БД table orders has 69 columns but 30 values were supplied
+[LINE:110]# 2021-02-01 13:58:22,416 - ERROR - FDataBase - Ошибка добавления заявки в БД table orders has 69 columns but 30 values were supplied
+[LINE:110]# 2021-02-01 13:58:39,705 - ERROR - FDataBase - Ошибка добавления заявки в БД table orders has 69 columns but 30 values were supplied

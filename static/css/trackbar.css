@@ -1,7 +1,7 @@
 /*@import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css');
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");*/
 
-.tracking-header{
+.tracking-header {
     z-index: 5;
 }
 
@@ -18,7 +18,7 @@
     transition: transform 2.5s;
 }
 
-.track-input{
+.track-input {
     opacity: 1;
     display: flex;
     justify-content: center;
@@ -122,66 +122,66 @@
 
 @media screen and (max-width: 750px) {
 
-.tracking-input {
-    width: 80%;
-}
+    .tracking-input {
+        width: 80%;
+    }
 
     .container-status {
         width: 80%;
-}
+    }
 
     .container-status-none {
-      width: 80%;
+        width: 80%;
     }
 
     .bttn {
-    width: 60%;
+        width: 60%;
     }
 
 }
 
-.container-status.open>.li-ext1 {
+.container-status.open > .li-ext1 {
     opacity: 1;
     transform: translateY(0);
     transition: transform 1s, opacity 1s;
 }
 
-.container-status.open>.li-ext2 {
+.container-status.open > .li-ext2 {
     opacity: 1;
     transform: translateY(0);
     transition: transform 1.3s, opacity 1.3s;
 }
 
-.container-status.open>.li-ext3 {
+.container-status.open > .li-ext3 {
     opacity: 1;
     transform: translateY(0);
     transition: transform 1.7s, opacity 1.7s;
 }
 
-.container-status.open>.li-ext4 {
+.container-status.open > .li-ext4 {
     opacity: 1;
     transform: translateY(0);
     transition: transform 2.2s, opacity 2.2s;
 }
 
-.container-status.open>.li-ext5 {
+.container-status.open > .li-ext5 {
     opacity: 1;
     transform: translateY(0);
     transition: transform 2.5s, opacity 2.5s;
 }
 
-.container-status.open>.tracking-input {
+.container-status.open > .tracking-input {
     transform: translateY(-150%);
     transition: transform 2.5s;
 }
 
-.container-status-none.open-none>.li-ext6 {
+.container-status-none.open-none > .li-ext6 {
     opacity: 1;
     transform: translateY(0);
     transition: transform 1s, opacity 1s;
 }
 
-.track-input.close{
+.track-input.close {
     opacity: 0;
     transform: translateY(-100%);
     transition: transform 1s, opacity 0.6s;

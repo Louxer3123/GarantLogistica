@@ -36,7 +36,7 @@ class TestBase(LiveServerTestCase):
         db.drop_all()
         db.create_all()
 
-        #create test user
+        # create test user
         self.user = ''
         db.session.add(self.user)
         db.session.commit()

@@ -1,8 +1,8 @@
-.article-li{
+.article-li {
     list-style-type: none;
 }
 
-.article-a{
+.article-a {
     padding: 5px;
     border: 3px solid rgba(0, 0, 0, 0);
     font-size: 20px;
@@ -44,18 +44,18 @@
     left: 0;
 }
 
-.article-annonce{
+.article-annonce {
     display: block;
     text-align: center;
     position: relative;
 }
 
-.article-title{
+.article-title {
     font-size: 20px;
     font-weight: 600;
 }
 
-.article-date{
+.article-date {
     text-align: right;
     font-size: 14px;
     font-weight: 100;
@@ -63,7 +63,7 @@
     border-bottom: 2px solid black;
 }
 
-.article-title-div{
+.article-title-div {
     display: flex;
     flex-direction: row;
     justify-content: space-between;

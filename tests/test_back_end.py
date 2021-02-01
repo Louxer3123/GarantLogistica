@@ -45,12 +45,12 @@ class TestViews(TestBase):
         response = self.client.get(url_for('log'))
         self.assertEqual(response.status_code, 200)
 
-    #def test_logout_view(self):
-      #  target_url = url_for('logout')
-      #  redirect_url = url_for('log', next=target_url)
-      #  response = self.client.get(target_url)
-      #  self.assertEqual(response.status_code, 302)
-      #  self.assertRedirects(response, redirect_url)
+    # def test_logout_view(self):
+    #  target_url = url_for('logout')
+    #  redirect_url = url_for('log', next=target_url)
+    #  response = self.client.get(target_url)
+    #  self.assertEqual(response.status_code, 302)
+    #  self.assertRedirects(response, redirect_url)
 
 
 if __name__ == '__main__':
